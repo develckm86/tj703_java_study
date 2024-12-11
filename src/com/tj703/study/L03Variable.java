@@ -14,7 +14,7 @@ public class L03Variable {
         double d=13.3;
         System.out.println(d);
         System.out.println(d*12);
-
+        System.out.println("최신버전");
 
     }
 }
