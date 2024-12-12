@@ -51,6 +51,7 @@ public class L05ReferenceType {
         //java는 매개변수를 생략할 수 없다. (강제)
         System.out.println(s.name);
         System.out.println(s.date);
+        System.out.println(~9);
     }
 }
 //객체의 타입을 정의하는 방법
