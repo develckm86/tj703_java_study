@@ -63,5 +63,33 @@ public class L06PrimitiveDataTypeCasting {
         System.out.println(b);
         b=(byte)130; //??
         System.out.println(b);
+        b=(byte)130.0;
+        System.out.println(b);
+        b=(byte)1E308;
+        System.out.println(b);
+        b=(byte)0.123; //1보다 작은수
+        System.out.println(b);
+        //정수 변수에 더 큰 수(더큰정수,실수)를 casting 형변환 후 대입 (byte,short,int)
+
+
+        i=(int)2147483649L;
+        System.out.println(i); //-2147483647
+        l=(long)9223372036854775808.0; // => 9223372036854776000 9.223372036854776e18
+        System.out.println(l);
+        l=(long)19223372036854775808.0;
+        System.out.println(l);
+        //long으로 casting 형변환하면
+        //long으로 표현할 수 없는 큰수(작은수)가 대입되었을 때 long의 가장 큰수(작은수)를 반환한다.
+
+        //f=(float)(1e308*1e308); //308승 이상의 실수를 표기하는 것 자체가 컴파일 오류가 발생
+        //곱한뒤에 갑을 대입하는 것은 컴파일 이후 실행하면서 발생하는 일이기 때문에 컴파일 오류를 무시
+        f=(float) -1e40; //float 입장에서 double의 크기는 무한대
+        System.out.println(f);//float 가 표현할 수 있는 제일 큰 수, Infinity
+
+        d=1e308*1e308;
+        System.out.println(d);
+
+        //실수 타입이 표현할 수 있는 수보다 크면 무한대
+        //컴퓨터 모두 약속으로 이루어진다!
     }
 }
