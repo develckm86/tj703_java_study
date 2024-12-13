@@ -30,6 +30,8 @@ public class L04PrimitiveDataType {
         * 3.데이터를 참조하는 변수는 소문자로 타입을 명시 (Int x, int o)
         * 4.데이터를 리터럴(눈에 보이는 그대로)하게 표기
         * 5.기본형 데이터는 그 데이터를 보조하는 자료형 데이터 타입인 랩퍼클래스가 존재합니다.
+        *
+        * Number : js 수의 랩퍼클래스
         * */
         Integer objI=13; //13 자료형
         Byte objB=13;
