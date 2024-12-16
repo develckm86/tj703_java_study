@@ -57,5 +57,6 @@ public class L08BooleanOperator {
         System.out.println( objI.intValue() == objI2.intValue() );
         //랩퍼클래스로 객체를 생성해도 랩퍼클래스의 동등비교연사는 값으로 연산된다.
 
+
     }
 }
