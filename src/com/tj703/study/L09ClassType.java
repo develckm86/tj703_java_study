@@ -1,7 +1,9 @@
 package com.tj703.study;
 import java.util.ArrayList; //java에서 제공하는 기본 라이브러리(java.util)
 class DataType{
-    //타입에는 필드와 메소드를 정의할 수 있다.
+    //타입에는 필드(전역변수)와 메소드(생성자+메소드)를 정의할 수 있다.
+    //타입에는 필드를 정의할 수 있는데 필드에는 전역변수,메소드,생성자가 있다.
+
     //필드와 메소드는 꼭 전역( class 의 첫번째 블럭 scope )에 선언합니다.
     int age=38;
     String name="최경민";
