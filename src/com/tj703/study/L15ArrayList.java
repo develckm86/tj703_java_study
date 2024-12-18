@@ -72,6 +72,5 @@ public class L15ArrayList {
         for(String str : strList){
             System.out.println((n++)+" : "+str);
         }
-
     }
 }
