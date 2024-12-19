@@ -9,6 +9,7 @@ public class H01RandomNumMatch {
         int num=(int) (random*50)+1;
         System.out.println(num);
         boolean game=true;
+        int count=0;
         while(game){
             Scanner scanner=new Scanner(System.in);
             String inputNumStr=scanner.nextLine();
@@ -16,15 +17,25 @@ public class H01RandomNumMatch {
             //입력이 5번을 넘기면 졌습니다. 종료! **1
             //game을 무한히 반복시키세요! 2
             try {
+                //1+(--count) : 1을 먼저더하고 count를 1빼라
+                //1+(count--) : count를 1빼고 1을 더하라
                 int inputNum=Integer.parseInt(inputNumStr);
+                ++count;
                 //다음 코드부터는 inputNum은 무조건 존재함
                 if(inputNum==num){
-                    System.out.println("정답!"); //break;
+                    System.out.println(count+" 시도 :정답!"); //break;
                     game=false;
-                }else if(inputNum>num){
-                    System.out.println("down");
                 }else{
-                    System.out.println("up");
+                    if(count==5){
+                        System.out.println("졌습니다.");
+                        game=false;
+                    }else{
+                        if(num<inputNum){
+                            System.out.println("down");
+                        }else{
+                            System.out.println("up");
+                        }
+                    }
                 }
             }catch (NumberFormatException e){
                 System.out.println("숫자만 입력하세요.");
