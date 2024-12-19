@@ -23,5 +23,11 @@ public class L17TwoArray {
         }
         //twoArr 의 모든 데이터를 더해서 출력하세요!
         int sum=0;
+        for (int[] nums:twoArr){
+            for(int num : nums){
+                sum+=num;
+            }
+        }
+        System.out.println(sum);
     }
 }
