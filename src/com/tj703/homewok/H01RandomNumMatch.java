@@ -8,7 +8,14 @@ public class H01RandomNumMatch {
         //맞출때 까지 반복 실행
         double random=Math.random(); //java.lang 패키지는 자동으로 Import (String,Integer..)
         System.out.println(random);
-        int num=(int)(random*50)+1; //더큰수->작은수 (강제형변환) casting
+        long num=(long) (random*50)+1; //더큰수->작은수 (강제형변환) casting
+        //(int)13.12345611223 : 실수 타입이 정수가 될때는 소수점 버림이 발생
+        //let num=  Math.trunc(-1.4); //js에서 버림 1
+        //let num=  Number.parseInt(-1.4); //js에서 버림 2
+
+        //fool(내림) : 1.4 -> 1, -1.4 => -2
+        //ceil(올림),round(반올림)
+
 
         System.out.println(num);
         Scanner scanner=new Scanner(System.in);
