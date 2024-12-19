@@ -24,19 +24,19 @@ public class H01RandomNumMatch {
                 //다음 코드부터는 inputNum은 무조건 존재함
                 if(inputNum==num){
                     System.out.println(count+" 시도 :정답!"); //break;
-                    game=false;
-                }else{
-                    if(count==5){
-                        System.out.println("졌습니다.");
-                        game=false;
-                    }else{
-                        if(num<inputNum){
-                            System.out.println("down");
-                        }else{
-                            System.out.println("up");
-                        }
-                    }
+                    break;
                 }
+                if(count==5){
+                    System.out.println("졌습니다.");
+                    break;
+                }
+                if(num<inputNum){
+                    System.out.println("down");
+                }else{
+                    System.out.println("up");
+                }
+
+
             }catch (NumberFormatException e){
                 System.out.println("숫자만 입력하세요.");
             }
