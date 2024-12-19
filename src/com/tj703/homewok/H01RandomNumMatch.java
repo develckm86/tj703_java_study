@@ -6,21 +6,29 @@ public class H01RandomNumMatch {
     public static void main(String[] args) {
         System.out.println("랜덤한게 생성한 (1~50)수를 맞추세요! ");
         double random=Math.random();
-        long num=(long) (random*50)+1;
+        int num=(int) (random*50)+1;
         System.out.println(num);
-        while(true){
+        boolean game=true;
+        while(game){
             Scanner scanner=new Scanner(System.in);
             String inputNumStr=scanner.nextLine();
-            try{
+            //정답을 5번 안에 맞추도록 하세요!
+            //입력이 5번을 넘기면 졌습니다. 종료! **1
+            //game을 무한히 반복시키세요! 2
+            try {
                 int inputNum=Integer.parseInt(inputNumStr);
-                //Integer.parseInt : "13"=>13 (Number() or Number.parsInt())
-                //"아13" => 오류
+                //다음 코드부터는 inputNum은 무조건 존재함
+                if(inputNum==num){
+                    System.out.println("정답!"); //break;
+                    game=false;
+                }else if(inputNum>num){
+                    System.out.println("down");
+                }else{
+                    System.out.println("up");
+                }
             }catch (NumberFormatException e){
-                System.out.println("수만입력하세요!");
-                continue;//아래코드는 무시하고 다시 반복문 실행
+                System.out.println("숫자만 입력하세요.");
             }
-            System.out.println("당신이 입력한 수는 :"+inputNumStr);
-            //break; //반복문을 종료
         }
     }
 }
