@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class H01RandomNumMatch {
     public static void main(String[] args) {
         boolean game=true;
-        while(game) {
+        gameLoop : while(game) {
             System.out.println("랜덤한게 생성한 (1~50)수를 맞추세요! ");
             double random = Math.random();
             int num = (int) (random * 50) + 1;
@@ -37,8 +37,7 @@ public class H01RandomNumMatch {
                 } catch (NumberFormatException e) {
                     if(inputNumStr.equals("exit")){
                         System.out.println("어플이 종료됩니다.");
-                        game=false; //전체 while 를 break 할 수 없어서 game=false 로 종료
-                        break; //내부 while break;
+                        break gameLoop;
                     }
                     System.out.println("숫자만 입력하세요.");
                 }
