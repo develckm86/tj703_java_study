@@ -33,7 +33,7 @@ public class L18Inheritance {
         //정의된 타입(class) 를 보고 객체를 생성한다.
         Member mem=new Member();
         //new Member() 부모는 class Member 인가요? false
-        //=>자바에서는 class가 객체의 타입인 거 뿐이지 부모가 될 수 없다.
+        //=>자바에서는 객체의 자신의 class가 객체의 타입인 거 뿐이지 부모가 될 수 없다.(==js)
         //new Member() 조상은 class Object 인가요? true
         //자바에서는 객체를 조상 취급하지 않는다. type class 를 조상 취급한다.
         //js는 프로토타입이 객체기 때문에 객체가 조상이 될 수 있다.
@@ -69,13 +69,13 @@ class Parent extends Object{
 class Member extends Parent{
     String name="경민";
     public Member(){
-        //this.__proto__=Parent.prototype; (함수 내부에서 상속)
+        //Member.prototype.__proto__=Parent.prototype; (함수 내부에서 상속)
         //super=Parent;(X)
         //super=new Parent();(X)
     }
 }
 //new Meber() => Memeber 와 Parent 객체가 동시에 생성된다.
-//function A(){this.a="안녕"} function B(){this.__proto__=A.prototype;}
-//function A(){this.a="안녕"} function B(){this.__proto__=new A()}
+//function A(){this.a="안녕"} function B(){B.prototype.__proto__=A.prototype;}
+//function A(){this.a="안녕"} function B(){B.prototype.__proto__=new A()}
 
 //new B().a  =>"안녕"
