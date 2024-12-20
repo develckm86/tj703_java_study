@@ -14,7 +14,7 @@ public class L17TwoArray {
         for(int i=0; i<strArr.length; i++){
             String s=strArr[i];
             for(int j=0; j<s.length(); j++){
-                System.out.print(s.charAt(j)+",");
+                System.out.print(s.charAt(j)+",");//s[j]
                 //sum+=Integer.parseInt(String.valueOf(s.charAt(j)).toString());
                 sum+=Integer.parseInt(s.charAt(j)+"");
             }
@@ -23,7 +23,7 @@ public class L17TwoArray {
         System.out.println("strArr의 모든 데이터의 합 :"+sum);
         sum=0;
         //twoArr 의 모든 데이터를 더해서 출력하세요!
-        for (int[] nums:twoArr){
+        for (int[] nums : twoArr){
             for(int num : nums){
                 sum+=num;
             }
