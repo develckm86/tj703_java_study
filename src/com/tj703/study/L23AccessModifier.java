@@ -51,11 +51,8 @@ public class L23AccessModifier {
             this._c=30; //_protected (기능은 없는데 개발자간의 약속 :네이밍 컨벤션 )
           }
          */
-
         AccessB c=new AccessB();
         //System.out.println(c.str3);
-
-
     }
 
 }
