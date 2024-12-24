@@ -3,6 +3,9 @@ interface Remotecon{
     //interface 는 간단한 설계도로 구현({body})이 불가능
     //interface 는 외부(public)에서 사용가능한 기능만 명세가능
     //바디가 구현되지 않은 메소드를 추상 메소드라 부른다.
+    /**
+     * 전원버튼
+     */
     void powerBtn(); //public이 자동완성
     /**
     * 방향키*/
