@@ -46,9 +46,6 @@ class ClickGameFrame extends JFrame {
             label.setText("");
         }
     }
-
-
-
 }
 
 
